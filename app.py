@@ -100,6 +100,18 @@ html,body,[class*="css"]{font-family:'IBM Plex Sans',sans-serif;}
 .stButton>button{background:#2563EB;color:white;border:none;border-radius:8px;font-weight:500;}
 .stButton>button:hover{background:#1D4ED8;}
 hr{border:none;border-top:1px solid #E2E8F0;margin:1.5rem 0;}
+/* Oculta o rodapé padrão do Streamlit */
+footer {
+    visibility: hidden;
+}
+
+/* Oculta as badges flutuantes do canto inferior direito ("Created by" e "Hosted with") */
+.viewerBadge_container__1QSob, 
+.styles_viewerBadge__1yB5_, 
+.viewerBadge_link__1S137, 
+.viewerBadge_text__1JaDK {
+    display: none !important;
+}
 </style>
 """, unsafe_allow_html=True)
 

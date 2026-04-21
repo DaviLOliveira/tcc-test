@@ -105,13 +105,19 @@ footer {
     visibility: hidden;
 }
 
-/* Oculta as badges flutuantes do canto inferior direito ("Created by" e "Hosted with") */
-.viewerBadge_container__1QSob, 
-.styles_viewerBadge__1yB5_, 
-.viewerBadge_link__1S137, 
-.viewerBadge_text__1JaDK {
+/* Esconde rodapé e cabeçalho padrão */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Esconde qualquer classe que tenha "viewerBadge" no nome (ignora os códigos aleatórios) */
+div[class*="viewerBadge"] {
     display: none !important;
 }
+
+/* Esconde o botão de deploy e barra de ferramentas nativa */
+.stAppDeployButton {display: none !important;}
+[data-testid="stToolbar"] {display: none !important;}
 </style>
 """, unsafe_allow_html=True)
 

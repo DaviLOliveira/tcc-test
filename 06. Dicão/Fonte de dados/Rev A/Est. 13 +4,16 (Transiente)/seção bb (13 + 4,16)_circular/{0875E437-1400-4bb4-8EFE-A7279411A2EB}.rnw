@@ -1,0 +1,294 @@
+
+* Stage number = 1
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1039E+02
+  Head_Pressure    -2.3210E+01   7.0396E+01
+  Discharge_x      -8.3638E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -1.6017E-01   3.2235E+00
+  Grad_y           -1.7810E+00   2.8997E+00
+  Grad_Total        0.0000E+00   3.9022E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   6.9058E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 2
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1039E+02
+  Head_Pressure    -2.3210E+01   7.0396E+01
+  Discharge_x      -8.3638E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -1.6017E-01   3.2235E+00
+  Grad_y           -1.7810E+00   2.8997E+00
+  Grad_Total        0.0000E+00   3.9022E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   6.9058E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 3
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1053E+02
+  Head_Pressure    -2.3210E+01   7.0536E+01
+  Discharge_x      -8.3644E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -1.6017E-01   3.2235E+00
+  Grad_y           -1.7810E+00   2.8997E+00
+  Grad_Total        0.0000E+00   3.9022E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   6.9196E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 4
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1181E+02
+  Head_Pressure    -2.3210E+01   7.1816E+01
+  Discharge_x      -8.3644E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -3.8221E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0451E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 5
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3644E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -6.7602E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 6
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3644E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -8.5971E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 7
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3645E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -8.7665E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 8
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3645E-06   1.9408E-03
+  Discharge_y      -1.3372E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3568E-03
+  Grad_x           -8.7665E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 9
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3646E-06   1.9410E-03
+  Discharge_y      -1.3374E-03   5.5135E-04
+  Discharge_Total   0.0000E+00   2.3571E-03
+  Grad_x           -9.3693E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 10
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3647E-06   1.9413E-03
+  Discharge_y      -1.3376E-03   5.5137E-04
+  Discharge_Total   0.0000E+00   2.3575E-03
+  Grad_x           -9.3693E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 11
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3648E-06   1.9418E-03
+  Discharge_y      -1.3379E-03   5.5152E-04
+  Discharge_Total   0.0000E+00   2.3581E-03
+  Grad_x           -9.3693E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 12
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3651E-06   1.9433E-03
+  Discharge_y      -1.3389E-03   5.5191E-04
+  Discharge_Total   0.0000E+00   2.3599E-03
+  Grad_x           -9.3693E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = 13
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3654E-06   1.9457E-03
+  Discharge_y      -1.3406E-03   5.5255E-04
+  Discharge_Total   0.0000E+00   2.3628E-03
+  Grad_x           -9.3693E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00
+
+* Stage number = ALL
+* Data Type   Min          Max
+
+  Head_Total        0.0000E+00   7.1203E+02
+  Head_Pressure    -2.3210E+01   7.2036E+01
+  Discharge_x      -8.3654E-06   1.9457E-03
+  Discharge_y      -1.3406E-03   5.5255E-04
+  Discharge_Total   0.0000E+00   2.3628E-03
+  Grad_x           -9.3693E-01   4.3597E+00
+  Grad_y           -8.5927E+00   2.8997E+00
+  Grad_Total        0.0000E+00   9.0090E+00
+  Perm_x            0.0000E+00   3.0000E+00
+  Perm_y            0.0000E+00   3.0000E+00
+  Pore_Pressure    -2.2769E+02   7.0667E+02
+  Degree_Of_saturation     0.0000E+00   1.0000E+00
+  Spatial permeability     0.0000E+00   3.0000E+00
+  Spatial_Water_Content     0.0000E+00   4.0000E-01
+  Spatial_Water_Content_Res     0.0000E+00   0.0000E+00
+  Spatial_Anisotropic_Ratio     0.0000E+00   1.0000E+00
+  Spatial_Anisotropic_Angle     0.0000E+00   0.0000E+00

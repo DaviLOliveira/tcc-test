@@ -1,0 +1,933 @@
+Slide Interpret View States File:
+  version: "9.037"
+  sli CRC: 0
+  slw CRC: 0
+
+Views States Start:
+  num states: 1
+  view state name 1: "Default"
+  view state ID 1: "{2AE87D42-4EA9-4e51-A559-6CBC60D3EBCB}"
+  view state {2AE87D42-4EA9-4e51-A559-6CBC60D3EBCB} start:
+    tools start:
+      num tools: 12
+      tool 1 start:
+        tool type: "PolyLines"
+        guid: "{EC19D708-6DE9-495d-913F-D1AB3F2CA814}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: no
+        line_weight: 3
+        fill_color: 0, 0, 255
+        entity_color: 0, 0, 139
+        start: 87.0412606758522, 713.379743842181
+        end: 87.0413, 691.92
+        font_size: 10
+        font_logfont: 0, 0, 0, 0, 400, 0, 0, 0, 0, 0, 0, 0, 0  lfFaceName: Arial
+        scale_with_zoom: yes
+        tool order within layer: 1
+        lock aspect ratio: yes
+        text_align: 288
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 87.0412606758522, 713.379743842181
+            1: 87.0413, 691.92
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: ""
+      tool 1 end:
+      tool 2 start:
+        tool type: "PolyLines"
+        guid: "{B478A54A-D6A8-4d9d-8701-618313EBEB7C}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: no
+        line_weight: 3
+        fill_color: 0, 0, 255
+        entity_color: 255, 0, 0
+        start: 94.6717132454261, 708.942589017171
+        end: 94.6717, 701.669
+        font_size: 10
+        font_logfont: 0, 0, 0, 0, 400, 0, 0, 0, 0, 0, 0, 0, 0  lfFaceName: Arial
+        scale_with_zoom: yes
+        tool order within layer: 2
+        lock aspect ratio: yes
+        text_align: 288
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 94.6717132454261, 708.942589017171
+            1: 94.6717, 701.669
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: ""
+      tool 2 end:
+      tool 3 start:
+        tool type: "PolyLines"
+        guid: "{E478EBAD-DB3C-44e1-837D-C1400C86FFE8}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: no
+        line_weight: 3
+        fill_color: 0, 0, 255
+        entity_color: 255, 0, 0
+        start: 44.4606, 712.105
+        end: 44.4606, 697.955
+        font_size: 10
+        font_logfont: 0, 0, 0, 0, 400, 0, 0, 0, 0, 0, 0, 0, 0  lfFaceName: Arial
+        scale_with_zoom: yes
+        tool order within layer: 3
+        lock aspect ratio: yes
+        text_align: 288
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 44.4606, 712.105
+            1: 44.4606, 697.955
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: ""
+      tool 3 end:
+      tool 4 start:
+        tool type: "PolyLines"
+        guid: "{3C61E285-996F-4cde-81EC-5C4AC03B956C}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: no
+        line_weight: 3
+        fill_color: 0, 0, 255
+        entity_color: 255, 0, 0
+        start: 88.6099176062274, 712.612677283375
+        end: 88.6099, 695.891
+        font_size: 10
+        font_logfont: 0, 0, 0, 0, 400, 0, 0, 0, 0, 0, 0, 0, 0  lfFaceName: Arial
+        scale_with_zoom: yes
+        tool order within layer: 4
+        lock aspect ratio: yes
+        text_align: 288
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 88.6099176062274, 712.612677283375
+            1: 88.6099, 695.891
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: ""
+      tool 4 end:
+      tool 5 start:
+        tool type: "Text Boxes"
+        guid: "{E36B84B7-625E-4deb-9233-11AEFA2BEF4F}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: yes
+        line_weight: 1
+        fill_color: 255, 255, 255
+        entity_color: 0, 0, 128
+        start: 44.4606422049365, 721.863
+        end: 44.4606422049365, 712.095917676526
+        font_size: 12
+        font_logfont: -16, 0, 0, 0, 400, 0, 0, 0, 0, 3, 2, 1, 34  lfFaceName: Arial
+        scale_with_zoom: no
+        tool order within layer: 5
+        lock aspect ratio: yes
+        text_align: 576
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 44.4606422049365, 721.863
+            1: 44.4606422049365, 712.095917676526
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: "BRUBDIPZ020"
+      tool 5 end:
+      tool 6 start:
+        tool type: "Text Boxes"
+        guid: "{B6BCA4A1-42A7-4930-9D30-98579287D995}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: yes
+        line_weight: 1
+        fill_color: 255, 255, 255
+        entity_color: 0, 0, 128
+        start: 87.0412606758522, 722.81
+        end: 87.0412606758522, 713.379743842181
+        font_size: 12
+        font_logfont: -16, 0, 0, 0, 400, 0, 0, 0, 0, 3, 2, 1, 34  lfFaceName: Arial
+        scale_with_zoom: no
+        tool order within layer: 6
+        lock aspect ratio: yes
+        text_align: 576
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 87.0412606758522, 722.81
+            1: 87.0412606758522, 713.379743842181
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: "BRUBDINA009_A"
+      tool 6 end:
+      tool 7 start:
+        tool type: "Text Boxes"
+        guid: "{3BF65A19-B18F-4233-8748-C28202C3B5BC}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: yes
+        line_weight: 1
+        fill_color: 255, 255, 255
+        entity_color: 0, 0, 128
+        start: 94.662, 713.637376684412
+        end: 94.6717132454261, 708.942589017171
+        font_size: 12
+        font_logfont: -16, 0, 0, 0, 400, 0, 0, 0, 0, 3, 2, 1, 34  lfFaceName: Arial
+        scale_with_zoom: no
+        tool order within layer: 7
+        lock aspect ratio: yes
+        text_align: 528
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 94.662, 713.637376684412
+            1: 94.6717132454261, 708.942589017171
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: "BRUBDIPZ008"
+      tool 7 end:
+      tool 8 start:
+        tool type: "Text Boxes"
+        guid: "{F9B637A4-B425-420e-BE08-853B41DE7EA6}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: yes
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: no
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: yes
+        line_weight: 1
+        fill_color: 255, 255, 255
+        entity_color: 0, 0, 128
+        start: 88.6099176062274, 719.152
+        end: 88.6099176062274, 712.612677283375
+        font_size: 12
+        font_logfont: -16, 0, 0, 0, 400, 0, 0, 0, 0, 3, 2, 1, 34  lfFaceName: Arial
+        scale_with_zoom: no
+        tool order within layer: 8
+        lock aspect ratio: yes
+        text_align: 528
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 88.6099176062274, 719.152
+            1: 88.6099176062274, 712.612677283375
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: "BRUBDIPZ018"
+      tool 8 end:
+      tool 9 start:
+        tool type: "Material Tables"
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: -0.148163903605315, 757.895186676096
+            1: 68.9002952099295, 725.197186676096
+          dpoint array end:
+        vertices end:
+        guid: "{55607EFB-15EB-47a9-BA6F-F649F19A7E6B}"
+        fill: yes
+        arrow: no
+        outline: yes
+        clr fill: 255, 255, 255
+        clr outline: 0, 0, 0
+        clr arrow: 0, 0, 0
+        width outline: 1
+        width arrow: 1
+        arrow pos: "TL"
+        soil legend settings start:
+          width: 5.4
+          height: 2.5
+          transparent: yes
+          update auto: yes
+          text clr: 0, 0, 0
+          header clr: 0, 0, 0
+          text bkgd: 255, 255, 255
+          header bkgd: 221, 221, 221
+          dock position: 0
+          scale with zoom: no
+          row heights start:
+            num: 8
+            0: 0.4
+            1: 0.3
+            2: 0.3
+            3: 0.3
+            4: 0.3
+            5: 0.3
+            6: 0.3
+            7: 0.3
+          row heights end:
+          column widths start:
+            num: 8
+            0: 1.45
+            1: 0.4
+            2: 0.75
+            3: 0.95
+            4: 0.55
+            5: 0.3
+            6: 0.3
+            7: 0.7
+          column widths end:
+          hidden rows start:
+            num: 0
+          hidden rows end:
+          hidden columns start:
+            num: 2
+            0: 36
+            1: 35
+          hidden columns end:
+          row percents start:
+            num: 8
+            0: 16
+            1: 12
+            2: 12
+            3: 12
+            4: 12
+            5: 12
+            6: 12
+            7: 12
+          row percents end:
+          col percents start:
+            num: 8
+            0: 26.85
+            1: 7.45
+            2: 13.9
+            3: 17.6
+            4: 10.2
+            5: 5.6
+            6: 5.6
+            7: 13
+          col percents end:
+          autofit: 1
+          column data start:
+            num: 8
+            0: "propName"
+            1: "propColor"
+            2: "propWeight"
+            3: "propMatType"
+            4: "propCoh1"
+            5: "propPhi1"
+            6: "propWater_PhiB"
+            7: "propWater_AirEntry"
+          column data end:
+          property indices start:
+            num: 7
+            0: 0
+            1: 1
+            2: 3
+            3: 5
+            4: 6
+            5: 7
+            6: 9
+          property indices end:
+          global font name: "Calibri"
+          global font size: 9
+        soil legend settings end:
+      tool 9 end:
+      tool 10 start:
+        tool type: "Permeability Legends"
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 66.5198683907968, 758.140121364317
+            1: 102.268427831937, 731.219980974217
+          dpoint array end:
+        vertices end:
+        guid: "{6F07F8C0-D2F2-4349-9B1D-110B05E49A65}"
+        fill: yes
+        arrow: no
+        outline: yes
+        clr fill: 255, 255, 255
+        clr outline: 0, 0, 0
+        clr arrow: 0, 0, 0
+        width outline: 1
+        width arrow: 1
+        arrow pos: "TL"
+        permeability legend settings start:
+          width: 4.4
+          height: 2.5
+          transparent: yes
+          update auto: yes
+          text clr: 0, 0, 0
+          header clr: 0, 0, 0
+          text bkgd: 255, 255, 255
+          header bkgd: 221, 221, 221
+          dock position: 0
+          scale with zoom: no
+          row heights start:
+            num: 8
+            0: 0.4
+            1: 0.3
+            2: 0.3
+            3: 0.3
+            4: 0.3
+            5: 0.3
+            6: 0.3
+            7: 0.3
+          row heights end:
+          column widths start:
+            num: 7
+            0: 1.45
+            1: 0.35
+            2: 0.5
+            3: 0.55
+            4: 0.4
+            5: 0.6
+            6: 0.55
+          column widths end:
+          hidden rows start:
+            num: 0
+          hidden rows end:
+          hidden columns start:
+            num: 4
+            0: 5
+            1: 2
+            2: 1
+            3: 0
+          hidden columns end:
+          row percents start:
+            num: 8
+            0: 16
+            1: 12
+            2: 12
+            3: 12
+            4: 12
+            5: 12
+            6: 12
+            7: 12
+          row percents end:
+          col percents start:
+            num: 7
+            0: 32.95
+            1: 7.95
+            2: 11.4
+            3: 12.5
+            4: 9.1
+            5: 13.65
+            6: 12.5
+          col percents end:
+          autofit: 1
+          column data start:
+            num: 7
+            0: "propName"
+            1: "propColor"
+            2: "propModel"
+            3: "propKs"
+            4: "propK2K1"
+            5: "propK1Angle"
+            6: "propSoilType"
+          column data end:
+          property indices start:
+            num: 7
+            0: 0
+            1: 1
+            2: 3
+            3: 5
+            4: 6
+            5: 7
+            6: 9
+          property indices end:
+          global font name: "Calibri"
+          global font size: 9
+        permeability legend settings end:
+      tool 10 end:
+      tool 11 start:
+        tool type: "Result Legends"
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 93.4195675793375, 758.167198775195
+            1: 137.642325059355, 742.693001293104
+          dpoint array end:
+        vertices end:
+        guid: "{EB53B732-3A7F-4ef9-9196-C6531A912E96}"
+        fill: yes
+        arrow: no
+        outline: yes
+        clr fill: 255, 255, 255
+        clr outline: 0, 0, 0
+        clr arrow: 0, 0, 0
+        width outline: 1
+        width arrow: 1
+        arrow pos: "TL"
+        results legend settings start:
+          width: 1.8
+          height: 1.15
+          transparent: yes
+          update auto: yes
+          text clr: 0, 0, 0
+          header clr: 0, 0, 0
+          text bkgd: 255, 255, 255
+          header bkgd: 221, 221, 221
+          dock position: 0
+          scale with zoom: no
+          row heights start:
+            num: 4
+            0: 0.4
+            1: 0.25
+            2: 0.25
+            3: 0.25
+          row heights end:
+          column widths start:
+            num: 2
+            0: 1.5
+            1: 0.3
+          column widths end:
+          hidden rows start:
+            num: 0
+          hidden rows end:
+          hidden columns start:
+            num: 0
+          hidden columns end:
+          row percents start:
+            num: 4
+            0: 34.8
+            1: 21.75
+            2: 21.75
+            3: 21.75
+          row percents end:
+          col percents start:
+            num: 2
+            0: 83.35
+            1: 16.7
+          col percents end:
+          autofit: 1
+          column data start:
+            num: 2
+            0: "propMethodName"
+            1: "propMinFSKC"
+          column data end:
+          property indices start:
+            num: 3
+            0: 0
+            1: 1
+            2: 2
+          property indices end:
+          global font name: "Calibri"
+          global font size: 9
+        results legend settings end:
+      tool 11 end:
+      tool 12 start:
+        tool type: "Text Boxes"
+        guid: "{0FE6B396-5A4F-40ce-92DF-B856D26D9059}"
+        pen_line_style: 0
+        text_outline: yes
+        text_color: 0, 0, 0
+        rotation_degrees_ccw: 0
+        text dim_text_flag: 12231
+        is_dimension_units: no
+        is_exterior_line: no
+        convert_to_inches: 0
+        swap_arrows: no
+        num_decimal_places: 1
+        is_behind_text_line: no
+        is_extension_line: no
+        is_dimension_primary_line: no
+        dimension_style: 12101
+        image_behind_geometry: no
+        file_name: "NO_FILE_LOADED"
+        path_name: "NO_PATH_LOADED"
+        transparent_color: 255, 255, 255
+        move_locked: no
+        pseudo_transparent: no
+        transparent: no
+        alpha: no
+        alpha_percent: 20
+        x_axis_spacing: 1
+        y_axis_spacing: 1
+        is_axis_spacing: no
+        arc_begin: 0
+        arc_end: 360
+        is_arc: no
+        is_circle: no
+        arrow_at_head: yes
+        arrow_at_tail: no
+        show_vertices: no
+        axis_left: no
+        axis_right: no
+        axis_top: no
+        axis_bottom: no
+        axis_global_coords: yes
+        is_hatched_interior: no
+        hatch_style_index: 2
+        is_filled: no
+        line_weight: 1
+        fill_color: 255, 255, 255
+        entity_color: 0, 0, 128
+        start: 94.3675611488976, 726.68449201558
+        end: 81.7488859012771, 714.050128167424
+        font_size: 16
+        font_logfont: -21, 0, 0, 0, 700, 0, 0, 0, 0, 3, 2, 1, 34  lfFaceName: Arial
+        scale_with_zoom: no
+        tool order within layer: 12
+        lock aspect ratio: yes
+        text_align: 144
+        assigned_view_guid: ""
+        assigned_stage: -1
+        visibility: yes
+        vertices start:
+          dpoint array start:
+            num points: 2
+            0: 94.3675611488976, 726.68449201558
+            1: 81.7488859012771, 714.050128167424
+          dpoint array end:
+        vertices end:
+        num_text_lines: 1
+        text 1: "F.S = <<global minimum value>>"
+      tool 12 end:
+    tools end:
+    gw queries start:
+      num queries: 1
+    gw queries end:
+    hydraulic query start:
+    hydraulic query end:
+    iso lines start:
+      num value lines: 0
+    iso lines end:
+    print preview layouts start:
+      num: 0
+    print preview layouts end:
+    views start:
+      num views: 0
+    views end:
+  view state {2AE87D42-4EA9-4e51-A559-6CBC60D3EBCB} end:
+Views States End:
+

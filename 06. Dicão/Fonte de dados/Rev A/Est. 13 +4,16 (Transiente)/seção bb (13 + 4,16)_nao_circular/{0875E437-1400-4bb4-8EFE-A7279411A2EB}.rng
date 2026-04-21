@@ -1,0 +1,27 @@
+
+* Stage number = 5
+* Stage converged flag = 0
+* Data Type   Min          Max
+
+  Sxx              0.0000E+00   0.0000E+00
+  Syy              0.0000E+00   0.0000E+00
+  Sxy              0.0000E+00   0.0000E+00
+  Szz              0.0000E+00   0.0000E+00
+  Sigma1           0.0000E+00   0.0000E+00
+  Sigma3           0.0000E+00   0.0000E+00
+  Disp_x           0.0000E+00   0.0000E+00
+  Disp_y           0.0000E+00   0.0000E+00
+  Disp_Total       0.0000E+00   0.0000E+00
+  ShearStrain      0.0000E+00   0.0000E+00
+  VoluStrain       0.0000E+00   0.0000E+00
+  P                0.0000E+00   0.0000E+00
+  Q                0.0000E+00   0.0000E+00
+  Sigma1_eff       0.0000E+00   0.0000E+00
+  Sigma3_eff       0.0000E+00   0.0000E+00
+  Szz_eff          0.0000E+00   0.0000E+00
+  P_eff            0.0000E+00   0.0000E+00
+  Q_eff            0.0000E+00   0.0000E+00
+  Pore_Pressure    0.0000E+00   0.0000E+00
+  Sxx_effective    0.0000E+00   0.0000E+00
+  Syy_effective    0.0000E+00   0.0000E+00
+  Szz_effective    0.0000E+00   0.0000E+00

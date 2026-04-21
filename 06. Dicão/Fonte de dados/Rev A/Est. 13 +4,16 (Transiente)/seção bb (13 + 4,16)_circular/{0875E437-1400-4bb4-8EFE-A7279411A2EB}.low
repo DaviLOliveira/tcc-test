@@ -1,0 +1,965 @@
+
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   1
+
+Elastic Analysis
+
+Model Step: 1
+Model Time: 0
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 5
+Tolerance Fluid: 0.000825856
+Maximum Total Head = 710.39
+
+Iteration History
+iteration number: 1 Convergence: 0.0985813
+iteration number: 2 Convergence: 0.0109408
+iteration number: 3 Convergence: 0.00708645
+iteration number: 4 Convergence: 0.00108281
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (sec.) = 3
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   2
+
+Elastic Analysis
+
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   3
+
+Elastic Analysis
+
+Model Step: 2
+Model Time: 5
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 2.32212e-07
+Maximum Total Head = 710.397
+
+Iteration History
+iteration number: 1 Convergence: 2.57997e-05
+iteration number: 2 Convergence: 1.39686e-06
+Iteration History Completed
+
+
+Model Step: 3
+Model Time: 38.3333
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 8.00672e-07
+Maximum Total Head = 710.444
+
+Iteration History
+iteration number: 1 Convergence: 0.000107919
+iteration number: 2 Convergence: 2.14654e-05
+iteration number: 3 Convergence: 5.6351e-06
+Iteration History Completed
+
+
+Model Step: 4
+Model Time: 71.6667
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 6.31494e-07
+Maximum Total Head = 710.49
+
+Iteration History
+iteration number: 1 Convergence: 8.74398e-05
+iteration number: 2 Convergence: 1.49499e-05
+iteration number: 3 Convergence: 4.81135e-06
+Iteration History Completed
+
+
+Model Step: 5
+Model Time: 100
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 2.7206e-07
+Maximum Total Head = 710.53
+
+Iteration History
+iteration number: 1 Convergence: 6.34792e-05
+iteration number: 2 Convergence: 1.09705e-05
+iteration number: 3 Convergence: 2.26111e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (sec.) = 15
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   4
+
+Elastic Analysis
+
+Model Step: 6
+Model Time: 107.5
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 9.83895e-07
+Maximum Total Head = 710.594
+
+Iteration History
+iteration number: 1 Convergence: 9.01055e-05
+iteration number: 2 Convergence: 1.20793e-05
+Iteration History Completed
+
+
+Model Step: 7
+Model Time: 157.5
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 8
+Tolerance Fluid: 6.74057e-07
+Maximum Total Head = 711.021
+
+Iteration History
+iteration number: 1 Convergence: 0.000600238
+iteration number: 2 Convergence: 0.000324606
+iteration number: 3 Convergence: 0.000124958
+iteration number: 4 Convergence: 9.41968e-06
+iteration number: 5 Convergence: 4.82521e-06
+iteration number: 6 Convergence: 2.47687e-06
+iteration number: 7 Convergence: 1.28234e-06
+Iteration History Completed
+
+
+Model Step: 8
+Model Time: 207.5
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 12
+Tolerance Fluid: 8.83332e-07
+Maximum Total Head = 711.447
+
+Iteration History
+iteration number: 1 Convergence: 0.00562118
+iteration number: 2 Convergence: 0.00152487
+iteration number: 3 Convergence: 0.000677065
+iteration number: 4 Convergence: 0.000141885
+iteration number: 5 Convergence: 3.78916e-05
+iteration number: 6 Convergence: 1.93965e-05
+iteration number: 7 Convergence: 1.15336e-05
+iteration number: 8 Convergence: 6.86778e-06
+iteration number: 9 Convergence: 4.09771e-06
+iteration number: 10 Convergence: 2.45074e-06
+iteration number: 11 Convergence: 1.46945e-06
+Iteration History Completed
+
+
+Model Step: 9
+Model Time: 250
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 10
+Tolerance Fluid: 8.34433e-07
+Maximum Total Head = 711.81
+
+Iteration History
+iteration number: 1 Convergence: 0.0026267
+iteration number: 2 Convergence: 0.000413511
+iteration number: 3 Convergence: 0.000165539
+iteration number: 4 Convergence: 1.20898e-05
+iteration number: 5 Convergence: 7.82559e-06
+iteration number: 6 Convergence: 5.03708e-06
+iteration number: 7 Convergence: 3.22814e-06
+iteration number: 8 Convergence: 2.06171e-06
+iteration number: 9 Convergence: 1.31311e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (sec.) = 33
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   5
+
+Elastic Analysis
+
+Model Step: 10
+Model Time: 253.1
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 2.73947e-07
+Maximum Total Head = 711.821
+
+Iteration History
+iteration number: 1 Convergence: 0.000178368
+iteration number: 2 Convergence: 4.29131e-06
+Iteration History Completed
+
+
+Model Step: 11
+Model Time: 273.767
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 6
+Tolerance Fluid: 5.11397e-07
+Maximum Total Head = 711.894
+
+Iteration History
+iteration number: 1 Convergence: 0.000819669
+iteration number: 2 Convergence: 0.000151223
+iteration number: 3 Convergence: 4.17279e-05
+iteration number: 4 Convergence: 2.02642e-06
+iteration number: 5 Convergence: 1.02891e-06
+Iteration History Completed
+
+
+Model Step: 12
+Model Time: 294.433
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 6.12654e-07
+Maximum Total Head = 711.968
+
+Iteration History
+iteration number: 1 Convergence: 0.000633799
+iteration number: 2 Convergence: 9.11353e-05
+iteration number: 3 Convergence: 7.79058e-06
+Iteration History Completed
+
+
+Model Step: 13
+Model Time: 312
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 6.31991e-07
+Maximum Total Head = 712.03
+
+Iteration History
+iteration number: 1 Convergence: 0.000495162
+iteration number: 2 Convergence: 7.39678e-05
+iteration number: 3 Convergence: 7.85445e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (sec.) = 48
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   6
+
+Elastic Analysis
+
+Model Step: 14
+Model Time: 313.4
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 4.75113e-08
+Maximum Total Head = 712.03
+
+Iteration History
+iteration number: 1 Convergence: 4.26791e-05
+iteration number: 2 Convergence: 2.74459e-06
+Iteration History Completed
+
+
+Model Step: 15
+Model Time: 322.733
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 1.11121e-07
+Maximum Total Head = 712.03
+
+Iteration History
+iteration number: 1 Convergence: 0.00026665
+iteration number: 2 Convergence: 2.10852e-05
+iteration number: 3 Convergence: 2.05223e-06
+Iteration History Completed
+
+
+Model Step: 16
+Model Time: 332.067
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 9.42092e-07
+Maximum Total Head = 712.03
+
+Iteration History
+iteration number: 1 Convergence: 0.000244301
+iteration number: 2 Convergence: 1.70408e-05
+Iteration History Completed
+
+
+Model Step: 17
+Model Time: 340
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 3.44518e-07
+Maximum Total Head = 712.03
+
+Iteration History
+iteration number: 1 Convergence: 0.000189549
+iteration number: 2 Convergence: 7.98112e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 1.03333
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   7
+
+Elastic Analysis
+
+Model Step: 18
+Model Time: 343
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 1.5831e-07
+Maximum Total Head = 712.025
+
+Iteration History
+iteration number: 1 Convergence: 6.58354e-05
+iteration number: 2 Convergence: 8.31025e-06
+Iteration History Completed
+
+
+Model Step: 19
+Model Time: 363
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 3.32511e-07
+Maximum Total Head = 711.995
+
+Iteration History
+iteration number: 1 Convergence: 0.000380517
+iteration number: 2 Convergence: 3.86366e-05
+iteration number: 3 Convergence: 4.76818e-06
+Iteration History Completed
+
+
+Model Step: 20
+Model Time: 383
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 4.91995e-07
+Maximum Total Head = 711.966
+
+Iteration History
+iteration number: 1 Convergence: 0.000354761
+iteration number: 2 Convergence: 4.58528e-05
+iteration number: 3 Convergence: 5.57898e-06
+Iteration History Completed
+
+
+Model Step: 21
+Model Time: 400
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 9.0664e-08
+Maximum Total Head = 711.94
+
+Iteration History
+iteration number: 1 Convergence: 0.000275561
+iteration number: 2 Convergence: 3.29841e-05
+iteration number: 3 Convergence: 2.55696e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 1.26667
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   8
+
+Elastic Analysis
+
+Model Step: 22
+Model Time: 405
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 1.68136e-07
+Maximum Total Head = 711.924
+
+Iteration History
+iteration number: 1 Convergence: 7.66666e-05
+iteration number: 2 Convergence: 9.68749e-06
+Iteration History Completed
+
+
+Model Step: 23
+Model Time: 438.333
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 5
+Tolerance Fluid: 5.79267e-07
+Maximum Total Head = 711.817
+
+Iteration History
+iteration number: 1 Convergence: 0.000393039
+iteration number: 2 Convergence: 3.9967e-05
+iteration number: 3 Convergence: 1.46386e-05
+iteration number: 4 Convergence: 1.31511e-06
+Iteration History Completed
+
+
+Model Step: 24
+Model Time: 471.667
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 7
+Tolerance Fluid: 5.35242e-07
+Maximum Total Head = 711.711
+
+Iteration History
+iteration number: 1 Convergence: 0.000633706
+iteration number: 2 Convergence: 0.000285274
+iteration number: 3 Convergence: 0.000137037
+iteration number: 4 Convergence: 3.69024e-05
+iteration number: 5 Convergence: 9.29409e-06
+iteration number: 6 Convergence: 2.24502e-06
+Iteration History Completed
+
+
+Model Step: 25
+Model Time: 500
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 6
+Tolerance Fluid: 4.23224e-07
+Maximum Total Head = 711.62
+
+Iteration History
+iteration number: 1 Convergence: 0.000313091
+iteration number: 2 Convergence: 9.39823e-05
+iteration number: 3 Convergence: 2.33861e-05
+iteration number: 4 Convergence: 3.0911e-06
+iteration number: 5 Convergence: 1.14462e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 1.53333
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   9
+
+Elastic Analysis
+
+Model Step: 26
+Model Time: 505
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 9.06302e-08
+Maximum Total Head = 711.592
+
+Iteration History
+iteration number: 1 Convergence: 4.8346e-05
+iteration number: 2 Convergence: 1.95562e-06
+Iteration History Completed
+
+
+Model Step: 27
+Model Time: 538.333
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 6.97777e-07
+Maximum Total Head = 711.41
+
+Iteration History
+iteration number: 1 Convergence: 0.000284128
+iteration number: 2 Convergence: 5.06664e-05
+iteration number: 3 Convergence: 8.63255e-06
+Iteration History Completed
+
+
+Model Step: 28
+Model Time: 571.667
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 8
+Tolerance Fluid: 6.41924e-07
+Maximum Total Head = 711.345
+
+Iteration History
+iteration number: 1 Convergence: 0.00108834
+iteration number: 2 Convergence: 0.000809023
+iteration number: 3 Convergence: 0.000675449
+iteration number: 4 Convergence: 0.00029756
+iteration number: 5 Convergence: 1.74679e-05
+iteration number: 6 Convergence: 3.72654e-06
+iteration number: 7 Convergence: 1.3661e-06
+Iteration History Completed
+
+
+Model Step: 29
+Model Time: 600
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 7
+Tolerance Fluid: 5.51163e-07
+Maximum Total Head = 711.277
+
+Iteration History
+iteration number: 1 Convergence: 0.000426784
+iteration number: 2 Convergence: 0.000275914
+iteration number: 3 Convergence: 0.000123258
+iteration number: 4 Convergence: 3.32454e-05
+iteration number: 5 Convergence: 8.85455e-06
+iteration number: 6 Convergence: 2.22781e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 1.83333
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   10
+
+Elastic Analysis
+
+Model Step: 30
+Model Time: 605
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 3.91297e-07
+Maximum Total Head = 711.265
+
+Iteration History
+iteration number: 1 Convergence: 4.97642e-05
+iteration number: 2 Convergence: 4.41932e-06
+Iteration History Completed
+
+
+Model Step: 31
+Model Time: 638.333
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 6
+Tolerance Fluid: 5.11433e-07
+Maximum Total Head = 711.187
+
+Iteration History
+iteration number: 1 Convergence: 0.000256093
+iteration number: 2 Convergence: 9.35635e-05
+iteration number: 3 Convergence: 2.71845e-05
+iteration number: 4 Convergence: 4.08245e-06
+iteration number: 5 Convergence: 1.44573e-06
+Iteration History Completed
+
+
+Model Step: 32
+Model Time: 671.667
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 9.32702e-07
+Maximum Total Head = 711.109
+
+Iteration History
+iteration number: 1 Convergence: 0.000179354
+iteration number: 2 Convergence: 4.24816e-05
+iteration number: 3 Convergence: 9.12943e-06
+Iteration History Completed
+
+
+Model Step: 33
+Model Time: 700
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 2.31489e-07
+Maximum Total Head = 711.043
+
+Iteration History
+iteration number: 1 Convergence: 0.000123589
+iteration number: 2 Convergence: 1.77937e-05
+iteration number: 3 Convergence: 3.70144e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 2.06667
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   11
+
+Elastic Analysis
+
+Model Step: 34
+Model Time: 710
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 3
+Tolerance Fluid: 5.57798e-07
+Maximum Total Head = 711.022
+
+Iteration History
+iteration number: 1 Convergence: 3.80762e-05
+iteration number: 2 Convergence: 3.19245e-06
+Iteration History Completed
+
+
+Model Step: 35
+Model Time: 776.667
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 6
+Tolerance Fluid: 5.18709e-07
+Maximum Total Head = 710.914
+
+Iteration History
+iteration number: 1 Convergence: 0.000200544
+iteration number: 2 Convergence: 8.27499e-05
+iteration number: 3 Convergence: 2.31113e-05
+iteration number: 4 Convergence: 2.3248e-06
+iteration number: 5 Convergence: 1.00994e-06
+Iteration History Completed
+
+
+Model Step: 36
+Model Time: 843.333
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 5
+Tolerance Fluid: 6.29423e-07
+Maximum Total Head = 710.859
+
+Iteration History
+iteration number: 1 Convergence: 0.000136645
+iteration number: 2 Convergence: 5.27361e-05
+iteration number: 3 Convergence: 1.39747e-05
+iteration number: 4 Convergence: 1.49168e-06
+Iteration History Completed
+
+
+Model Step: 37
+Model Time: 900
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 9.24008e-07
+Maximum Total Head = 710.812
+
+Iteration History
+iteration number: 1 Convergence: 9.13165e-05
+iteration number: 2 Convergence: 2.31088e-05
+iteration number: 3 Convergence: 6.35424e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 2.28333
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   12
+
+Elastic Analysis
+
+Model Step: 38
+Model Time: 942.5
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 4
+Tolerance Fluid: 4.96249e-07
+Maximum Total Head = 710.78
+
+Iteration History
+iteration number: 1 Convergence: 5.94845e-05
+iteration number: 2 Convergence: 1.17453e-05
+iteration number: 3 Convergence: 3.3542e-06
+Iteration History Completed
+
+
+Model Step: 39
+Model Time: 1225.83
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 9
+Tolerance Fluid: 6.5101e-07
+Maximum Total Head = 710.648
+
+Iteration History
+iteration number: 1 Convergence: 0.000295518
+iteration number: 2 Convergence: 0.000123564
+iteration number: 3 Convergence: 5.37303e-05
+iteration number: 4 Convergence: 1.38838e-05
+iteration number: 5 Convergence: 7.7724e-06
+iteration number: 6 Convergence: 4.62584e-06
+iteration number: 7 Convergence: 2.52213e-06
+iteration number: 8 Convergence: 1.00321e-06
+Iteration History Completed
+
+
+Model Step: 40
+Model Time: 1509.17
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 8
+Tolerance Fluid: 4.5021e-07
+Maximum Total Head = 710.564
+
+Iteration History
+iteration number: 1 Convergence: 0.000221977
+iteration number: 2 Convergence: 4.70615e-05
+iteration number: 3 Convergence: 2.38069e-05
+iteration number: 4 Convergence: 6.09885e-06
+iteration number: 5 Convergence: 3.33246e-06
+iteration number: 6 Convergence: 2.03801e-06
+iteration number: 7 Convergence: 1.11292e-06
+Iteration History Completed
+
+
+Model Step: 41
+Model Time: 1750
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 6
+Tolerance Fluid: 6.88419e-07
+Maximum Total Head = 710.518
+
+Iteration History
+iteration number: 1 Convergence: 0.00015984
+iteration number: 2 Convergence: 2.02921e-05
+iteration number: 3 Convergence: 9.40149e-06
+iteration number: 4 Convergence: 2.21025e-06
+iteration number: 5 Convergence: 1.17334e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 2.5
+------------------------------------------------------
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   13
+
+Elastic Analysis
+
+Model Step: 42
+Model Time: 3406.75
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 10
+Tolerance Fluid: 9.834e-07
+Maximum Total Head = 710.495
+
+Iteration History
+iteration number: 1 Convergence: 0.000667431
+iteration number: 2 Convergence: 0.000260681
+iteration number: 3 Convergence: 8.13918e-05
+iteration number: 4 Convergence: 2.13383e-05
+iteration number: 5 Convergence: 1.3291e-05
+iteration number: 6 Convergence: 7.7857e-06
+iteration number: 7 Convergence: 3.58683e-06
+iteration number: 8 Convergence: 2.13122e-06
+iteration number: 9 Convergence: 1.47039e-06
+Iteration History Completed
+
+
+Model Step: 43
+Model Time: 14451.8
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 16
+Tolerance Fluid: 6.29227e-07
+Maximum Total Head = 710.458
+
+Iteration History
+iteration number: 1 Convergence: 0.00136073
+iteration number: 2 Convergence: 0.000592955
+iteration number: 3 Convergence: 0.000171491
+iteration number: 4 Convergence: 4.26614e-05
+iteration number: 5 Convergence: 4.70168e-05
+iteration number: 6 Convergence: 4.28015e-05
+iteration number: 7 Convergence: 2.09481e-05
+iteration number: 8 Convergence: 1.13228e-05
+iteration number: 9 Convergence: 1.05548e-05
+iteration number: 10 Convergence: 1.00562e-05
+iteration number: 11 Convergence: 4.91609e-06
+iteration number: 12 Convergence: 2.73568e-06
+iteration number: 13 Convergence: 2.29261e-06
+iteration number: 14 Convergence: 2.28924e-06
+iteration number: 15 Convergence: 1.16335e-06
+Iteration History Completed
+
+
+Model Step: 44
+Model Time: 25496.8
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 12
+Tolerance Fluid: 6.82266e-07
+Maximum Total Head = 710.421
+
+Iteration History
+iteration number: 1 Convergence: 0.00070004
+iteration number: 2 Convergence: 0.000174968
+iteration number: 3 Convergence: 5.05502e-05
+iteration number: 4 Convergence: 1.40999e-05
+iteration number: 5 Convergence: 1.38976e-05
+iteration number: 6 Convergence: 1.22283e-05
+iteration number: 7 Convergence: 6.01284e-06
+iteration number: 8 Convergence: 3.13646e-06
+iteration number: 9 Convergence: 2.31804e-06
+iteration number: 10 Convergence: 2.53099e-06
+iteration number: 11 Convergence: 1.47467e-06
+Iteration History Completed
+
+
+Model Step: 45
+Model Time: 34885
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 11
+Tolerance Fluid: 7.64559e-07
+Maximum Total Head = 710.39
+
+Iteration History
+iteration number: 1 Convergence: 0.00046695
+iteration number: 2 Convergence: 9.61137e-05
+iteration number: 3 Convergence: 2.98217e-05
+iteration number: 4 Convergence: 9.59064e-06
+iteration number: 5 Convergence: 5.70033e-06
+iteration number: 6 Convergence: 6.00177e-06
+iteration number: 7 Convergence: 3.49058e-06
+iteration number: 8 Convergence: 1.93566e-06
+iteration number: 9 Convergence: 1.39564e-06
+iteration number: 10 Convergence: 1.31302e-06
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (min.) = 2.56667
+------------------------------------------------------

@@ -1,0 +1,33 @@
+
+Slide groundwater engine version:   9.038
+
+
+STAGE NUMBER:   1
+
+Elastic Analysis
+
+Model Step: 1
+Model Time: 0
+Number of Load Steps: 1
+
+Load Step: 1
+Percentage load 100
+Iterations: 9
+Tolerance Fluid: 0.000802645
+Maximum Total Head = 710.64
+
+Iteration History
+iteration number: 1 Convergence: 0.0570766
+iteration number: 2 Convergence: 0.0129137
+iteration number: 3 Convergence: 0.0047585
+iteration number: 4 Convergence: 0.00181644
+iteration number: 5 Convergence: 0.00218458
+iteration number: 6 Convergence: 0.00193746
+iteration number: 7 Convergence: 0.00133431
+iteration number: 8 Convergence: 0.00122607
+Iteration History Completed
+
+
+total elapsed time (sec.) = 0
+accumulated elapsed time (sec.) = 0
+------------------------------------------------------

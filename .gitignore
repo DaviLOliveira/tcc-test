@@ -1,0 +1,17 @@
+# Arquivos compilados do Python
+__pycache__/
+
+# Arquivos de dados
+*.csv
+*.xlsx
+
+# Artigos e Livros de Referência
+*.pdf
+02. Referencias para o artigo/
+
+# Arquivos compactados e documentos
+*.zip
+*.docx
+
+# Pastas irrelevantes para o código
+00. Obsoleto/

@@ -13,6 +13,7 @@ warnings.filterwarnings("ignore")
 import numpy as np
 import pandas as pd
 import streamlit as st
+import plotly.express as px
 
 # Config e esquema
 from config import (
@@ -63,8 +64,8 @@ logging.basicConfig(level=logging.WARNING)
 # ---------------------------------------------------------------------------
 
 st.set_page_config(
-    page_title="PiezoPrev",
-    page_icon="📡",
+    page_title="GeoPredict",
+    page_icon="🌏",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
@@ -84,13 +85,16 @@ html,body,[class*="css"]{font-family:'IBM Plex Sans',sans-serif;}
 .step-card{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;
   padding:1.4rem 1.6rem;margin-bottom:1.2rem;}
 .info-box{background:#EFF6FF;border-left:4px solid #2563EB;padding:.7rem 1rem;
-  border-radius:0 8px 8px 0;margin:.5rem 0 1rem 0;font-size:.87rem;line-height:1.6;}
+ border-radius:0 8px 8px 0;margin:.5rem 0 1rem 0;font-size:.87rem;line-height:1.6; color: #1E293B !important;}
+
 .warn-box{background:#FFF7ED;border-left:4px solid #F97316;padding:.7rem 1rem;
-  border-radius:0 8px 8px 0;margin:.5rem 0 .8rem 0;font-size:.87rem;}
+ border-radius:0 8px 8px 0;margin:.5rem 0 .8rem 0;font-size:.87rem; color: #1E293B !important;}
+
 .danger-box{background:#FFF1F2;border-left:4px solid #EF4444;padding:.7rem 1rem;
-  border-radius:0 8px 8px 0;margin:.5rem 0 .8rem 0;font-size:.87rem;font-weight:500;}
+ border-radius:0 8px 8px 0;margin:.5rem 0 .8rem 0;font-size:.87rem;font-weight:500; color: #1E293B !important;}
+
 .ok-box{background:#F0FDF4;border-left:4px solid #22C55E;padding:.7rem 1rem;
-  border-radius:0 8px 8px 0;margin:.5rem 0 .8rem 0;font-size:.87rem;}
+ border-radius:0 8px 8px 0;margin:.5rem 0 .8rem 0;font-size:.87rem; color: #1E293B !important;}
 .kpi-card{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;
   padding:1rem 1.2rem;text-align:center;}
 .kpi-val{font-size:1.65rem;font-weight:600;color:#1E3A5F;
@@ -208,8 +212,8 @@ def _nav_buttons(back_step=None, next_step=None, next_label="Continuar →"):
 
 st.markdown("""
 <div class="header">
-<h1>📡 PiezoPrev</h1>
-<p>Previsão de Piezômetros e Medidores de Nível d'Água · XGBoost · SHAP · CV Temporal</p>
+<h1>GeoPredict</h1>
+<p>Previsão de Piezômetros e Medidores de Nível d'Água</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -224,7 +228,7 @@ st.markdown("")
 
 if step == 1:
     _step_header(1, "Upload dos dados do instrumento")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     _info(
         "<strong>Formato aceito:</strong> arquivo <code>.csv</code> com pelo menos 3 colunas — "
@@ -310,7 +314,7 @@ if step == 1:
 
 elif step == 2:
     _step_header(2, "Tipo de instrumento")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     _info(
         "Selecione o tipo de instrumento. Isso determina a frequência temporal esperada "
@@ -354,7 +358,7 @@ elif step == 2:
 
 elif step == 3:
     _step_header(3, "Tipo de solo/material")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     _info(
         "Informe o material geotécnico onde o instrumento está instalado. "
@@ -447,7 +451,7 @@ elif step == 3:
 
 elif step == 4:
     _step_header(4, "Permeabilidade hidráulica")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     tipo_material = st.session_state.get("tipo_material", "")
     perm_db       = st.session_state["perm_db"]
@@ -522,7 +526,7 @@ elif step == 4:
 
 elif step == 5:
     _step_header(5, "Dados pluviométricos (obrigatório)")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     _info(
         "Os dados de chuva são <strong>obrigatórios</strong> para o modelo.<br><br>"
@@ -590,7 +594,7 @@ elif step == 5:
 
 elif step == 6:
     _step_header(6, "Nível d'água do reservatório (opcional)")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     _info(
         "Esta etapa é <strong>opcional</strong>. Recomendada para barragens com reservatório "
@@ -640,7 +644,7 @@ elif step == 6:
 
 elif step == 7:
     _step_header(7, "Horizonte de previsão")
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
 
     freq_hours = st.session_state.get("freq_hours", 24.0)
 
@@ -744,7 +748,7 @@ elif step == 8:
     _step_header(8, "Gerar Previsão")
 
     # Resumo da configuração
-    st.markdown('<div class="step-card">', unsafe_allow_html=True)
+    
     st.markdown("**Resumo da configuração:**")
     for k, v in {
         "Tipo de instrumento": st.session_state.get("inst_type", "—"),
@@ -762,7 +766,7 @@ elif step == 8:
         st.markdown(f"&nbsp;&nbsp;• **{k}:** {v}")
     st.markdown('</div>', unsafe_allow_html=True)
 
-    run_btn = st.button("🚀 Gerar Previsão", type="primary", use_container_width=True)
+    run_btn = st.button("Gerar Previsão", type="primary", use_container_width=True)
 
     if run_btn:
         progress = st.progress(0, "Iniciando...")
@@ -804,6 +808,15 @@ elif step == 8:
             progress.progress(10, "Pré-processamento...")
             prep = run_preprocessing(df)
             df_proc, encoders = prep.df, prep.encoders
+
+            # --- CORREÇÃO DE VÍRGULAS ---
+            # Troca vírgula por ponto e força formato numérico em todas as colunas de dados
+            colunas_para_corrigir = ["leitura", "valor", "pluviometria", "nivel_reservatorio"]
+            for col in colunas_para_corrigir:
+                if col in df_proc.columns:
+                    df_proc[col] = df_proc[col].astype(str).str.replace(',', '.')
+                    df_proc[col] = pd.to_numeric(df_proc[col], errors='coerce')
+            # ----------------------------
 
             progress.progress(22, "Controle de qualidade e detecção de anomalias...")
             from config import MissingValueConfig
@@ -962,7 +975,7 @@ elif step == 8:
                 )
                 st.dataframe(params_df, use_container_width=True, hide_index=True)
 
-        # CV Temporal
+        # CV Temporal (o finalzinho do bloco anterior)
         if result.cv_results and "aggregated" in result.cv_results:
             st.markdown("### 🔄 Validação Cruzada Temporal")
             agg = result.cv_results["aggregated"]
@@ -975,8 +988,9 @@ elif step == 8:
             st.dataframe(cv_disp, use_container_width=True, hide_index=True)
             st.plotly_chart(plot_cv_results(result.cv_results), use_container_width=True)
 
-        # Gráfico principal
-        st.markdown("### 📈 Previsão")
+        # ---------------------------------------------------------
+        # 1. RECUPERANDO AS VARIÁVEIS DE PREVISÃO
+        # ---------------------------------------------------------
         df_inst   = df_feat[df_feat["instrumento"] == selected_inst]
         test_inst = (
             result.test_df[result.test_df["instrumento"] == selected_inst]
@@ -988,7 +1002,9 @@ elif step == 8:
         unc_data    = all_uncertainties.get(selected_inst)
         forecast_df = fc_data["forecast_df"] if fc_data else pd.DataFrame()
 
-        # Alertas
+        # ---------------------------------------------------------
+        # 2. ALERTAS E AVISOS DA PREVISÃO
+        # ---------------------------------------------------------
         if fc_data:
             for w in fc_data.get("reliability_warnings", []):
                 _warn(w)
@@ -1000,18 +1016,33 @@ elif step == 8:
             for a in check_physical_plausibility(forecast_df, envelope):
                 _warn(a)
 
-        fig_main = plot_forecast_final(
-            df_history=df_inst,
-            forecast_df=forecast_df,
-            instrumento=selected_inst,
-            tipo_instrumento=inst_type_str,
-            n_days=n_days,
-            freq_hours=freq_hours,
-            envelope=envelope,
-            test_df=test_inst,
-            uncertainty_df=unc_data,
-        )
-        st.plotly_chart(fig_main, use_container_width=True)
+        # ---------------------------------------------------------
+        # 3. NOVO GRÁFICO DE LINHAS E DOWNLOAD DO CSV
+        # ---------------------------------------------------------
+        if not forecast_df.empty:
+            st.markdown("### 📈 Gráfico Direto da Previsão")
+            
+            fig_linha = px.line(
+                forecast_df,
+                x="data",
+                y="previsao",
+                title=f"Previsão de Nível - {selected_inst}",
+                labels={"data": "Data da Leitura", "previsao": "Valor Previsto"},
+                markers=True
+            )
+            fig_linha.update_traces(line_color="#2563EB") 
+            st.plotly_chart(fig_linha, use_container_width=True)
+
+            st.markdown("### 💾 Exportar Dados da Previsão")
+            csv_bytes = forecast_df.to_csv(index=False, sep=";", decimal=",").encode('utf-8')
+            
+            st.download_button(
+                label="📥 Baixar Previsão em .CSV",
+                data=csv_bytes,
+                file_name=f"previsao_isolada_{selected_inst}.csv",
+                mime="text/csv",
+                use_container_width=True
+            )
 
         # Tabela de previsões
         if not forecast_df.empty:

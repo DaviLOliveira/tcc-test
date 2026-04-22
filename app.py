@@ -1,5 +1,5 @@
 """
-app.py — GEOPredict (Layout Premium + Resultados Enriquecidos + CSS Blindado para Deploy)
+app.py — GEOPredict (Layout Premium + CSS Protegido + Fallback DB)
 """
 
 import io
@@ -93,22 +93,24 @@ def set_background_and_glassmorphism(image_filename):
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* 1. Fonte base segura com FORÇA TOTAL para cor branca (Ignora o Light Mode do Render) */
-p, label, span, h1, h2, h3, h4, h5, h6, li, div[data-testid="stMarkdownContainer"], .st-emotion-cache-10trblm { 
+/* 1. Reset Global */
+html, body { margin: 0; padding: 0; background-color: #0f172a !important; }
+[data-testid="stHeader"] { display: none !important; }
+
+/* 2. Fonte base focada apenas em textos, protegendo os ícones nativos */
+h1, h2, h3, h4, h5, h6, p, label, li, div[data-testid="stMarkdownContainer"] { 
     font-family: 'Inter', sans-serif !important; 
-    font-size: 1.02rem !important; 
     color: #f8fafc !important; 
 }
 h1, h2, h3, h4, h5, h6 { font-weight: 700 !important; }
 
-/* Força os checkboxes e radio buttons a ficarem brancos */
-div[data-testid="stCheckbox"] label, div[data-testid="stRadio"] label {
-    color: #f8fafc !important;
+/* Força a proteção da fonte de ícones do Streamlit (nuvem do upload) */
+.material-symbols-rounded, [data-testid="stIconMaterial"] {
+    font-family: 'Material Symbols Rounded' !important;
 }
 
-/* 2. Reset Global Seguro */
-html, body { margin: 0; padding: 0; background-color: #0f172a !important; }
-[data-testid="stHeader"] { display: none !important; }
+/* Força os checkboxes e radio buttons a ficarem legíveis */
+div[data-testid="stCheckbox"] label, div[data-testid="stRadio"] label { color: #f8fafc !important; }
 
 /* 3. O Container Principal (Floating Card Premium) */
 [data-testid="stMainBlockContainer"] {
@@ -118,7 +120,6 @@ html, body { margin: 0; padding: 0; background-color: #0f172a !important; }
     border-radius: 20px !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
-    
     padding: 3rem 4rem !important;
     max-width: 1400px !important;
     margin-top: 4vh !important;
@@ -182,7 +183,6 @@ footer {visibility: hidden;} #MainMenu {visibility: hidden;} header {visibility:
         st.markdown(css_base + bg_css, unsafe_allow_html=True)
     else:
         st.markdown(css_base, unsafe_allow_html=True)
-        st.warning(f"⚠️ Imagem de fundo '{image_filename}' não encontrada.")
 
 set_background_and_glassmorphism("fundo.jpeg")
 
@@ -243,6 +243,8 @@ with col1:
         st.session_state["df_raw"] = df_sample
         st.session_state["freq_hours"] = 24.0
         st.session_state["freq_info"] = {"freq_hours": 24.0, "confidence": "alta", "n_valid_intervals": 729}
+        # Se usar demo, reseta a pluviometria para evitar erro de datas!
+        st.session_state["df_pluv"] = None 
 
     elif uploaded_main is not None:
         try:
@@ -269,18 +271,38 @@ with col1:
 
 with col2:
     st.markdown("<h4>3. Tipo de solo/material</h4>", unsafe_allow_html=True)
+    
+    # ----------------- CORREÇÃO DA LISTA VAZIA (FALLBACK) -----------------
     soil_options = get_soil_options(st.session_state["perm_db"])
+    if not soil_options:
+        # Se o banco de dados não subir pro Render, injetamos essas opções de segurança!
+        soil_options = ["Argila", "Silte", "Areia Fina", "Areia Grossa", "Pedregulho", "Xisto", "Solo Residual"]
+        
     c_sel, c_txt = st.columns(2)
     with c_sel: soil_selected = st.selectbox("Lista:", ["— Selecione —"] + soil_options, key="soil_sel")
     with c_txt: soil_free = st.text_input("Manual:", key="soil_free", placeholder="Ex: Xisto...")
+    
     tipo_material = soil_free.strip() if soil_free.strip() else (soil_selected if soil_selected != "— Selecione —" else None)
+    perm_ref = None
+    
     if tipo_material:
         st.session_state["tipo_material"] = tipo_material
         perm_ref = lookup_permeability(tipo_material, st.session_state["perm_db"])
+        
+        # Se não achar na base, usa o dicionário de emergência
+        if not perm_ref:
+            fallbacks = {
+                "Argila": {"k_cms": 1e-7, "fonte": "Padrão"}, "Silte": {"k_cms": 1e-5, "fonte": "Padrão"},
+                "Areia Fina": {"k_cms": 1e-3, "fonte": "Padrão"}, "Areia Grossa": {"k_cms": 1e-2, "fonte": "Padrão"},
+                "Pedregulho": {"k_cms": 1e-1, "fonte": "Padrão"}, "Xisto": {"k_cms": 1e-6, "fonte": "Padrão"},
+                "Solo Residual": {"k_cms": 1e-4, "fonte": "Padrão"}
+            }
+            if tipo_material in fallbacks:
+                perm_ref = fallbacks[tipo_material]
+                
         if perm_ref: _ok(f"k ref: {perm_ref['k_cms']:.2e} cm/s")
 
     st.markdown("<h4>4. Permeabilidade hidráulica</h4>", unsafe_allow_html=True)
-    perm_ref = lookup_permeability(st.session_state.get("tipo_material", ""), st.session_state["perm_db"]) if st.session_state.get("tipo_material") else None
     if perm_ref and st.checkbox(f"Usar sugerido: {perm_ref['k_cms']:.2e} cm/s", value=True, key="use_suggested_perm"):
         st.session_state["permeabilidade_cms"] = perm_ref["k_cms"]
     else:
@@ -312,7 +334,7 @@ with col3:
     st.session_state["n_days_horizon"] = next((h[1] for h in FORECAST_HORIZONS_PRODUCAO if h[0] == selected_prod), 30)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    run_btn = st.button("Gerar Previsão do Instrumento", type="primary", use_container_width=True)
+    run_btn = st.button("🚀 Gerar Previsão do Instrumento", type="primary", use_container_width=True)
 
 # ===========================================================================
 # PROCESSAMENTO 
@@ -321,7 +343,8 @@ st.markdown("---")
 if run_btn:
     if st.session_state.get("df_raw") is None: st.error("Atenção: Faça o upload (Etapa 1).")
     elif st.session_state.get("tipo_material") is None: st.error("Atenção: Selecione o material (Etapa 3).")
-    elif st.session_state.get("df_pluv") is None and ("pluviometria" not in st.session_state.get("df_raw", pd.DataFrame()).columns): st.error("Atenção: Pluviometria necessária (Etapa 5).")
+    elif st.session_state.get("df_pluv") is None and ("pluviometria" not in st.session_state.get("df_raw", pd.DataFrame()).columns): 
+        st.error("Atenção: Pluviometria necessária (Etapa 5). Lembre-se: Se usou a 'Demonstração', não faça upload de chuva real, pois as datas não vão bater!")
     else:
         progress = st.progress(0, "Iniciando processamento...")
         try:
@@ -340,6 +363,11 @@ if run_btn:
                 df_r = st.session_state["df_reserv"].copy()
                 if "nivel_reservatorio" in df_r.columns: df_r["nivel_reservatorio"] = pd.to_numeric(df_r["nivel_reservatorio"].astype(str).str.replace(',', '.'), errors='coerce')
                 df, _ = merge_external_data(df, df_r)
+                
+            # Verifica se o cruzamento de datas não destruiu a tabela
+            if df.empty:
+                st.error("Erro Crítico: O cruzamento dos dados principais com a chuva resultou em uma tabela vazia. Verifique se os arquivos possuem anos/datas em comum!")
+                st.stop()
 
             progress.progress(20, "Pré-processamento e engenharia...")
             df_proc, encoders = run_preprocessing(df).df, run_preprocessing(df).encoders
@@ -369,7 +397,7 @@ if st.session_state.get("forecast_done"):
     st.markdown("---")
     st.markdown("""
         <div style='display: flex; align-items: center; margin-bottom: 20px;'>
-            <h2 style='color: #f8fafc; font-size: 2rem; font-weight: 700; margin-right: 15px;'>Dashboard de Resultados</h2>
+            <h2 style='color: #f8fafc; font-size: 2rem; font-weight: 700; margin-right: 15px;'>📊 Dashboard de Resultados</h2>
             <div style='background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;'>
                 Previsão Concluída
             </div>
@@ -406,7 +434,7 @@ if st.session_state.get("forecast_done"):
         fig_linha.update_layout(
             title=dict(text=f"Projeção Piezométrica: Instrumento {selected_inst}", font=dict(size=20, color="#f8fafc")),
             paper_bgcolor="rgba(0,0,0,0)", 
-            plot_bgcolor="rgba(0,0,0,0.15)", 
+            plot_bgcolor="rgba(0,0,0,0.2)", 
             font_color="#cbd5e1", 
             title_font_color="#f8fafc", 
             legend_font_color="#cbd5e1",
@@ -420,10 +448,10 @@ if st.session_state.get("forecast_done"):
         col_down1, col_down2, _ = st.columns([1, 1, 2])
         with col_down1:
             csv_bytes = forecast_df.to_csv(index=False, sep=";", decimal=",").encode('utf-8')
-            st.download_button(label="Baixar Tabela de Previsão (.CSV)", data=csv_bytes, file_name=f"previsao_{selected_inst}_{datetime.date.today()}.csv", mime="text/csv", use_container_width=True)
+            st.download_button(label="📥 Baixar Tabela de Previsão (.CSV)", data=csv_bytes, file_name=f"previsao_{selected_inst}_{datetime.date.today()}.csv", mime="text/csv", use_container_width=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    tab_shap, tab_diag = st.tabs(["Interpretabilidade (SHAP)", "Diagnóstico do Modelo"])
+    tab_shap, tab_diag = st.tabs(["🔍 Interpretabilidade (SHAP)", "⚙️ Diagnóstico do Modelo"])
     
     with tab_shap:
         if st.session_state.get("shap_global"):

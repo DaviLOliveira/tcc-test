@@ -328,7 +328,7 @@ def plot_full_series(df_all, test_df, instrumento="", forecast_df=None, envelope
             name="Previsão futura", mode="lines+markers",
             line=dict(color=C_FORE, width=2, dash="dot"), marker=dict(size=4, symbol="circle-open")))
 
-    fig.add_vline(x=split_date, line_dash="dot", line_color="#64748B",
+    fig.add_vline(x=str(split_date), line_dash="dot", line_color="#64748B",
                   annotation_text="Início do teste", annotation_position="top right",
                   annotation_font_size=10)
     fig.update_layout(**_base_layout(f"Série Completa — {instrumento}",

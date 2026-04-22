@@ -205,15 +205,15 @@ def treat_missing_values(
 
             if col in metadata_cols:
                 # Forward fill apenas — não zerar metadados
-                filled = series.fillna(method="ffill")
+                filled = series.ffill()
                 df.loc[idx, col] = filled
             elif col in zero_fill_cols:
                 # Forward fill limitado, depois zera (ausência de chuva = 0)
-                filled = series.fillna(method="ffill", limit=cfg.max_gap_external).fillna(0)
+                filled = series.ffill(limit=cfg.max_gap_external).fillna(0)
                 df.loc[idx, col] = filled
             else:
                 # Forward fill limitado para outras externas
-                filled = series.fillna(method="ffill", limit=cfg.max_gap_external)
+                filled = series.ffill(limit=cfg.max_gap_external)
                 df.loc[idx, col] = filled
 
             report.missing_summary[inst].setdefault(col, {
@@ -227,8 +227,7 @@ def treat_missing_values(
             if col in df.columns:
                 df.loc[idx, col] = (
                     df.loc[idx, col]
-                    .fillna(method="ffill")
-                    .fillna(method="bfill")
+                    .bfill()
                     .fillna("Desconhecido")
                 )
 

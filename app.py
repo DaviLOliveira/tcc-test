@@ -1,5 +1,5 @@
 """
-app.py — GEOPredict (Layout Premium + Resultados Enriquecidos + Dark Charts + CSS Bulletproof)
+app.py — GEOPredict (Layout Premium + Resultados Enriquecidos + CSS Blindado para Deploy)
 """
 
 import io
@@ -74,10 +74,10 @@ st.set_page_config(
 def apply_dark_theme(fig):
     if hasattr(fig, 'update_layout'):
         fig.update_layout(
-            paper_bgcolor="rgba(0,0,0,0)", # Fundo externo transparente
-            plot_bgcolor="rgba(0,0,0,0.15)", # Fundo interno levemente escurecido
-            font_color="#cbd5e1", # Texto cinza claro
-            title_font_color="#f8fafc", # Título branco
+            paper_bgcolor="rgba(0,0,0,0)", 
+            plot_bgcolor="rgba(0,0,0,0.15)", 
+            font_color="#cbd5e1", 
+            title_font_color="#f8fafc", 
             legend_font_color="#cbd5e1",
             margin=dict(l=20, r=20, t=50, b=20)
         )
@@ -93,20 +93,26 @@ def set_background_and_glassmorphism(image_filename):
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* 1. Fonte base segura */
-p, label, h1, h2, h3, h4, h5, h6, li, div[data-testid="stMarkdownContainer"] { 
+/* 1. Fonte base segura com FORÇA TOTAL para cor branca (Ignora o Light Mode do Render) */
+p, label, span, h1, h2, h3, h4, h5, h6, li, div[data-testid="stMarkdownContainer"], .st-emotion-cache-10trblm { 
     font-family: 'Inter', sans-serif !important; 
     font-size: 1.02rem !important; 
+    color: #f8fafc !important; 
 }
-h1, h2, h3, h4, h5, h6 { color: #f8fafc !important; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700 !important; }
+
+/* Força os checkboxes e radio buttons a ficarem brancos */
+div[data-testid="stCheckbox"] label, div[data-testid="stRadio"] label {
+    color: #f8fafc !important;
+}
 
 /* 2. Reset Global Seguro */
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; background-color: #0f172a !important; }
 [data-testid="stHeader"] { display: none !important; }
 
-/* 3. O Container Principal (Floating Card Premium) - SEGURO SEM ALTURA FORÇADA */
+/* 3. O Container Principal (Floating Card Premium) */
 [data-testid="stMainBlockContainer"] {
-    background: rgba(15, 23, 42, 0.78) !important; /* Vidro escuro translúcido */
+    background: rgba(15, 23, 42, 0.78) !important; 
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
     border-radius: 20px !important;
@@ -361,7 +367,6 @@ if run_btn:
 # ===========================================================================
 if st.session_state.get("forecast_done"):
     st.markdown("---")
-    # Título do Dashboard de Resultados
     st.markdown("""
         <div style='display: flex; align-items: center; margin-bottom: 20px;'>
             <h2 style='color: #f8fafc; font-size: 2rem; font-weight: 700; margin-right: 15px;'>📊 Dashboard de Resultados</h2>
@@ -375,39 +380,35 @@ if st.session_state.get("forecast_done"):
     all_forecasts = st.session_state.get("all_forecasts", {})
     result = st.session_state["training_result"]
     
-    # Seletor do Instrumento fora das colunas para ter destaque
     selected_inst = st.selectbox("Selecione o Instrumento para Análise Detalhada:", sorted(df_feat["instrumento"].unique()))
 
-    # 1. KPIs Gigantes de Performance (MAE, RMSE, R²) em Caixas de Vidro
     st.markdown("<br>", unsafe_allow_html=True)
     col_kpi1, col_kpi2, col_kpi3, col_kpi4 = st.columns(4)
     mt = result.metrics_test
     
     with col_kpi1:
-        st.metric(label="MAE (Erro Absoluto)", value=round(mt.get('MAE', 0), 4), help="Quanto menor, melhor (média do erro em valor absoluto)")
+        st.metric(label="MAE (Erro Absoluto)", value=round(mt.get('MAE', 0), 4))
     with col_kpi2:
-        st.metric(label="RMSE (Raiz do Erro)", value=round(mt.get('RMSE', 0), 4), help="Quanto menor, melhor (penaliza erros grandes)")
+        st.metric(label="RMSE (Raiz do Erro)", value=round(mt.get('RMSE', 0), 4))
     with col_kpi3:
-        st.metric(label="Acurácia R²", value=f"{round(mt.get('R²', 0), 2)}", help="Próximo de 1 é o ideal (capacidade de explicação)")
+        st.metric(label="Acurácia R²", value=f"{round(mt.get('R²', 0), 2)}")
     with col_kpi4:
-        st.metric(label="Horizonte", value=f"{st.session_state['n_days_horizon']} dias", help="Período futuro projetado pelo modelo")
+        st.metric(label="Horizonte", value=f"{st.session_state['n_days_horizon']} dias")
     
     st.markdown("<br>", unsafe_allow_html=True)
 
     forecast_df = all_forecasts.get(selected_inst, {}).get("forecast_df", pd.DataFrame())
 
     if not forecast_df.empty:
-        # 2. Gráfico Plotly Premium com Fundo Transparente
-        # Vamos usar a função de tema para garantir que o gráfico flutue sobre o vidro
         fig_linha = px.line(forecast_df, x="data", y="previsao", markers=True)
         fig_linha.update_traces(line_color="#3b82f6", marker=dict(size=6, color="#60a5fa")) 
         
         fig_linha.update_layout(
             title=dict(text=f"Projeção Piezométrica: Instrumento {selected_inst}", font=dict(size=20, color="#f8fafc")),
-            paper_bgcolor="rgba(0,0,0,0)", # Fundo externo transparente
-            plot_bgcolor="rgba(0,0,0,0.15)", # Fundo interno levemente escurecido estilo dashboard
-            font_color="#cbd5e1", # Texto cinza claro
-            title_font_color="#f8fafc", # Título branco
+            paper_bgcolor="rgba(0,0,0,0)", 
+            plot_bgcolor="rgba(0,0,0,0.15)", 
+            font_color="#cbd5e1", 
+            title_font_color="#f8fafc", 
             legend_font_color="#cbd5e1",
             xaxis=dict(title="", showgrid=True, gridcolor="rgba(255,255,255,0.08)", showline=True, linecolor="rgba(255,255,255,0.2)"),
             yaxis=dict(title="Nível / Leitura (m)", showgrid=True, gridcolor="rgba(255,255,255,0.08)", showline=True, linecolor="rgba(255,255,255,0.2)"),
@@ -416,13 +417,11 @@ if st.session_state.get("forecast_done"):
         )
         st.plotly_chart(fig_linha, use_container_width=True)
 
-        # 3. Botões de Ação (Download)
         col_down1, col_down2, _ = st.columns([1, 1, 2])
         with col_down1:
             csv_bytes = forecast_df.to_csv(index=False, sep=";", decimal=",").encode('utf-8')
             st.download_button(label="📥 Baixar Tabela de Previsão (.CSV)", data=csv_bytes, file_name=f"previsao_{selected_inst}_{datetime.date.today()}.csv", mime="text/csv", use_container_width=True)
 
-    # 4. Abas Avançadas para Engenharia e Geotecnia
     st.markdown("<br>", unsafe_allow_html=True)
     tab_shap, tab_diag = st.tabs(["🔍 Interpretabilidade (SHAP)", "⚙️ Diagnóstico do Modelo"])
     
@@ -430,11 +429,8 @@ if st.session_state.get("forecast_done"):
         if st.session_state.get("shap_global"):
             st.markdown("<h4 style='border:none; color:#f8fafc; font-size:1.3rem; margin-top:10px;'>Impacto das Variáveis (Análise SHAP)</h4>", unsafe_allow_html=True)
             st.caption("Entenda quais variáveis (chuva, dias, tempo) mais impactam as subidas e descidas na previsão do modelo.")
-            
-            # Aqui forçamos o tema translúcido para o gráfico do SHAP também!
             fig_shap = plot_shap_summary(st.session_state["shap_global"])
-            fig_shap = apply_dark_theme(fig_shap) # Mágica Sênior: Gráfico flutua sobre o vidro
-            
+            fig_shap = apply_dark_theme(fig_shap) 
             st.plotly_chart(fig_shap, use_container_width=True)
             
     with tab_diag:

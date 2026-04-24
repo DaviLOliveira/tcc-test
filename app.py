@@ -334,7 +334,7 @@ with col3:
     st.session_state["n_days_horizon"] = next((h[1] for h in FORECAST_HORIZONS_PRODUCAO if h[0] == selected_prod), 30)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    run_btn = st.button("🚀 Gerar Previsão do Instrumento", type="primary", use_container_width=True)
+    run_btn = st.button("Gerar Previsão do Instrumento", type="primary", use_container_width=True)
 
 # ===========================================================================
 # PROCESSAMENTO 
@@ -397,7 +397,7 @@ if st.session_state.get("forecast_done"):
     st.markdown("---")
     st.markdown("""
         <div style='display: flex; align-items: center; margin-bottom: 20px;'>
-            <h2 style='color: #f8fafc; font-size: 2rem; font-weight: 700; margin-right: 15px;'>📊 Dashboard de Resultados</h2>
+            <h2 style='color: #f8fafc; font-size: 2rem; font-weight: 700; margin-right: 15px;'>Dashboard de Resultados</h2>
             <div style='background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;'>
                 Previsão Concluída
             </div>
@@ -448,10 +448,10 @@ if st.session_state.get("forecast_done"):
         col_down1, col_down2, _ = st.columns([1, 1, 2])
         with col_down1:
             csv_bytes = forecast_df.to_csv(index=False, sep=";", decimal=",").encode('utf-8')
-            st.download_button(label="📥 Baixar Tabela de Previsão (.CSV)", data=csv_bytes, file_name=f"previsao_{selected_inst}_{datetime.date.today()}.csv", mime="text/csv", use_container_width=True)
+            st.download_button(label="Baixar Tabela de Previsão (.CSV)", data=csv_bytes, file_name=f"previsao_{selected_inst}_{datetime.date.today()}.csv", mime="text/csv", use_container_width=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    tab_shap, tab_diag = st.tabs(["🔍 Interpretabilidade (SHAP)", "⚙️ Diagnóstico do Modelo"])
+    tab_shap, tab_diag = st.tabs(["Interpretabilidade (SHAP)", "Diagnóstico do Modelo"])
     
     with tab_shap:
         if st.session_state.get("shap_global"):

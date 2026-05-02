@@ -1,5 +1,5 @@
 """
-app.py — GEOPredict (Layout Premium + CSS Protegido + Fallback DB)
+app.py — GEOPredict (Layout Premium + CSS Protegido + Diagnóstico de Dados)
 """
 
 import io
@@ -182,7 +182,6 @@ footer {visibility: hidden;} #MainMenu {visibility: hidden;} header {visibility:
         st.markdown(css_base + bg_css, unsafe_allow_html=True)
     else:
         st.markdown(css_base, unsafe_allow_html=True)
-        st.warning(f"⚠️ Imagem de fundo '{image_filename}' não encontrada.")
 
 set_background_and_glassmorphism("fundo.jpeg")
 
@@ -271,7 +270,6 @@ with col1:
 with col2:
     st.markdown("<h4>3. Tipo de solo/material</h4>", unsafe_allow_html=True)
     
-    # ----------------- FALLBACK DA LISTA DE SOLOS -----------------
     soil_options = get_soil_options(st.session_state["perm_db"])
     if not soil_options:
         soil_options = ["Argila", "Silte", "Areia Fina", "Areia Grossa", "Pedregulho", "Xisto", "Solo Residual"]
@@ -334,17 +332,34 @@ with col3:
     run_btn = st.button("🚀 Gerar Previsão do Instrumento", type="primary", use_container_width=True)
 
 # ===========================================================================
-# PROCESSAMENTO 
+# PROCESSAMENTO E DIAGNÓSTICO
 # ===========================================================================
 st.markdown("---")
 if run_btn:
     if st.session_state.get("df_raw") is None: st.error("Atenção: Faça o upload (Etapa 1).")
     elif st.session_state.get("tipo_material") is None: st.error("Atenção: Selecione o material (Etapa 3).")
     elif st.session_state.get("df_pluv") is None and ("pluviometria" not in st.session_state.get("df_raw", pd.DataFrame()).columns): 
-        st.error("Atenção: Pluviometria necessária (Etapa 5). Lembre-se: Se usou a 'Demonstração', não faça upload de chuva real, pois as datas não vão bater!")
+        st.error("Atenção: Pluviometria necessária (Etapa 5). Lembre-se: Se usou a 'Demonstração', não faça upload de chuva real!")
     else:
         progress = st.progress(0, "Iniciando processamento...")
         try:
+            # --- TRAVA SÊNIOR: ANÁLISE DE DATAS PARA DEBUG ---
+            df_inst_diag = st.session_state["df_raw"]
+            df_pluv_diag = st.session_state.get("df_pluv")
+            
+            try:
+                min_inst = pd.to_datetime(df_inst_diag['data'], dayfirst=True, format='mixed').min().strftime('%d/%m/%Y')
+                max_inst = pd.to_datetime(df_inst_diag['data'], dayfirst=True, format='mixed').max().strftime('%d/%m/%Y')
+                diag_msg = f"🗓️ **Período do Instrumento:** {min_inst} até {max_inst}\n"
+                
+                if df_pluv_diag is not None and 'data' in df_pluv_diag.columns:
+                    min_pluv = pd.to_datetime(df_pluv_diag['data'], dayfirst=True, format='mixed').min().strftime('%d/%m/%Y')
+                    max_pluv = pd.to_datetime(df_pluv_diag['data'], dayfirst=True, format='mixed').max().strftime('%d/%m/%Y')
+                    diag_msg += f"🌧️ **Período da Chuva:** {min_pluv} até {max_pluv}"
+            except Exception:
+                diag_msg = "Não foi possível extrair as datas automaticamente."
+            # --------------------------------------------------
+
             df = st.session_state["df_raw"].copy()
             for col in ["leitura", "valor"]:
                 if col in df.columns: df[col] = pd.to_numeric(df[col].astype(str).str.replace(',', '.'), errors='coerce')
@@ -361,10 +376,6 @@ if run_btn:
                 if "nivel_reservatorio" in df_r.columns: df_r["nivel_reservatorio"] = pd.to_numeric(df_r["nivel_reservatorio"].astype(str).str.replace(',', '.'), errors='coerce')
                 df, _ = merge_external_data(df, df_r)
 
-            if df.empty:
-                st.error("Erro Crítico: A tabela ficou vazia! Verifique se os arquivos de Piezômetro e Chuva possuem datas em comum.")
-                st.stop()
-
             progress.progress(20, "Pré-processamento e engenharia...")
             df_proc, encoders = run_preprocessing(df).df, run_preprocessing(df).encoders
             df_proc, quality_report = treat_missing_values(df_proc, cfg=MissingValueConfig())
@@ -373,6 +384,13 @@ if run_btn:
             feat_cfg = get_feature_config_for_instrument(InstrumentType(st.session_state["inst_type"]), st.session_state["freq_hours"])
             df_feat = build_features(df_proc, cfg=feat_cfg)
             feature_cols = get_feature_columns(df_feat)
+
+            # INTERCEPTA O ERRO ANTES DO XGBOOST
+            if df_feat.empty or len(df_feat) == 0:
+                st.error("🚨 O Treinamento foi abortado porque a tabela de dados ficou VAZIA.")
+                st.warning("Isso aconteceu porque as datas dos seus arquivos não se sobrepõem. Veja a análise abaixo:\n\n" + diag_msg)
+                st.info("💡 **Solução:** Envie um arquivo de Pluviometria que tenha dados nos mesmos anos que o Piezômetro.")
+                st.stop()
 
             progress.progress(50, "Treinando Inteligência Artificial (XGBoost)...")
             result = run_training(df_feat, feature_cols, tuning_cfg=TuningConfig(enabled=st.session_state["enable_tuning"], n_trials=20, timeout_seconds=90), cv_cfg=DEFAULT_CV, run_cv=True, run_tuning=st.session_state["enable_tuning"])
@@ -384,7 +402,7 @@ if run_btn:
 
             progress.progress(100, "Concluído!")
             st.session_state.update({"df_featured": df_feat, "feature_cols": feature_cols, "training_result": result, "all_forecasts": all_forecasts, "forecast_done": True, "shap_global": compute_shap_values(result.model, result.test_df[feature_cols].fillna(0), feature_cols)})
-        except Exception as e: st.error(f"Erro: {e}")
+        except Exception as e: st.error(f"Erro no processamento: {e}")
 
 # ===========================================================================
 # NOVO DASHBOARD DE RESULTADOS (PREMIUM)
